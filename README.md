@@ -40,3 +40,7 @@ Besides that due some limitations we decide that in order to process variables o
 The same with camelcase notation, we would expect a variable that ends with `CamelCase` and also this variable should have a matching variable with the same name minus `CamelCase`, e.g. `Name` and `NameCamelCase`.
 
 
+## How to contribute
+
+We definitely welcome your patches and contributions. If you are new to github, please start by reading [Pull Request howto](https://help.github.com/articles/about-pull-requests/)
+
