@@ -1,0 +1,88 @@
+<mvcommons-painel-administrador i18n-titulo titulo="Listagem test"
+  [includeFooter]="true" [includeFechar]="true">
+  <ng-template pTemplate="body">
+    <form class="filtro-pesquisa ui-g-12 no-padding" [formGroup]="formFilter">
+    
+      <div class="ui-g-3">
+        <label class="required" i18n>Id</label>
+        <input type="text" maxlength="100" uppercase pInputText formControlName="id" />
+      </div>
+    
+      <div class="ui-g-3">
+        <label class="required" i18n>Nome</label>
+        <input type="text" maxlength="100" uppercase pInputText formControlName="nome" />
+      </div>
+    
+      <div class="ui-g-3">
+        <label class="required" i18n>Endereço</label>
+        <input type="text" maxlength="100" uppercase pInputText formControlName="endereço" />
+      </div>
+     
+      <div class="ui-g-3 filtro-pesquisa-btn-actions">
+        <button pButton icon="fa fa-search" debounceClick (debounceClick)="listar()" title="Pesquisar" tooltipPosition="bottom"></button>
+        <button pButton icon="fa fa-eraser" (click)="limparBusca()" title="Limpar" tooltipPosition="bottom"></button>
+      </div>
+    </form>
+    <div #lista class="lista-elementos-100 ui-g-12">
+
+      <p-table
+          tableEmptyRows
+          [value]="listTests"
+          [scrollable]="true"
+          selectionMode="single"
+          [responsive]="true"
+          (onRowSelect)="onEventoSelecao($event.data)"
+          (onRowUnselect)="onEventoDesselecao()"
+          [resizableColumns]="true">
+
+      <ng-template pTemplate="colgroup">
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            
+          </colgroup>
+      </ng-template>
+
+      <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th pResizableColumn i18n>Id</th>
+            <th pResizableColumn i18n>Nome</th>
+            <th pResizableColumn i18n>Endereço</th>
+            
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-dto>
+          <tr [pSelectableRow]="dto" (dblclick)="editar(dto)">
+            
+            <td class="ui-resizable-column">{{ dto.id }}</td>
+            
+            <td class="ui-resizable-column">{{ dto.nome }}</td>
+            
+            <td class="ui-resizable-column">{{ dto.endereço }}</td>
+            
+          </tr>
+      </ng-template>
+  </p-table>
+
+</div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button pButton icon="fa fa-file" (click)="novo()" i18n-title title="Novo" ></button>
+    <button pButton icon="fa fa-edit" (click)="editar(dto)" i18n-title title="Editar" [disabled]="!dtoSelecionado" ></button>
+    <button pButton icon="fa fa-trash"  (click)="excluir()" i18n-title title="Excluir" [disabled]="!dtoSelecionado"></button>
+  </ng-template>
+</mvcommons-painel-administrador>
+
+<p-dialog *ngIf="display" i18n-header header=" {{dtoSelecionado?.id ? &#39;Edição&#39; : &#39;Inclusão&#39;  }} test"    
+    (onHide)="limparCamposNovo()" 
+    [(visible)]="display" 
+    modal="modal"
+    width="500" 
+    [responsive]="true">
+
+    &lt;test-form
+        [dto]="dtoSelecionado"
+        (eventOnSave)="onSave($event)">
+    &lt;/test-form>
+</p-dialog>

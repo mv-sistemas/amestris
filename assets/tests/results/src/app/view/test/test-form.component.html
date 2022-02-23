@@ -1,0 +1,16 @@
+<form [formGroup]="form" >
+  
+    <div class="ui-g-4">
+      <label class="required" i18n>Id</label>
+      <input type="text" maxlength="100" uppercase pInputText formControlName="id" />
+    </div>
+  
+    <div class="ui-g-4">
+      <label class="required" i18n>Name</label>
+      <input type="text" maxlength="100" uppercase pInputText formControlName="name" />
+    </div>
+  
+    <div class="ui-g-12">
+      <button title="Salvar" pButton icon="fa fas fa-save" debounceClick (debounceClick)="salvar()"></button>
+    </div>
+  </form>

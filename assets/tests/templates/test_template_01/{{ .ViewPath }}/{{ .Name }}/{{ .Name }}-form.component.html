@@ -1,0 +1,11 @@
+<form [formGroup]="form" >
+  {{range $i, $field := .FieldsArray }}
+    <div class="ui-g-4">
+      <label class="required" i18n>{{label $field}}</label>
+      <input type="text" maxlength="100" uppercase pInputText formControlName="{{$field}}" />
+    </div>
+  {{end}}
+    <div class="ui-g-12">
+      <button title="Salvar" pButton icon="fa fas fa-save" debounceClick (debounceClick)="salvar()"></button>
+    </div>
+  </form>
