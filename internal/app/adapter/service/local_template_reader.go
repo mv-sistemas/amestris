@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/mvsp/amestris/internal/app/domain"
+	"github.com/mv-sistemas/amestris/internal/app/domain"
 )
 
 /**

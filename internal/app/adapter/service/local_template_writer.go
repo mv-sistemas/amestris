@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/mvsp/amestris/internal/app/domain"
-	"github.com/mvsp/amestris/utils"
+	"github.com/mv-sistemas/amestris/internal/app/domain"
+	"github.com/mv-sistemas/amestris/utils"
 	"github.com/rs/zerolog/log"
 )
 

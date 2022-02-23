@@ -6,10 +6,10 @@ import (
 	"strings"
 
 	"github.com/manifoldco/promptui"
-	"github.com/mvsp/amestris/internal/app/adapter/service"
-	"github.com/mvsp/amestris/internal/app/application/usecase"
-	"github.com/mvsp/amestris/internal/app/domain"
-	"github.com/mvsp/amestris/utils"
+	"github.com/mv-sistemas/amestris/internal/app/adapter/service"
+	"github.com/mv-sistemas/amestris/internal/app/application/usecase"
+	"github.com/mv-sistemas/amestris/internal/app/domain"
+	"github.com/mv-sistemas/amestris/utils"
 	"github.com/spf13/cobra"
 )
 

@@ -1,6 +1,6 @@
 package service
 
-import "github.com/mvsp/amestris/internal/app/domain"
+import "github.com/mv-sistemas/amestris/internal/app/domain"
 
 type ITemplateReader interface {
 	Read(path string) *domain.Template

@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/mvsp/amestris/internal/app/domain"
+	"github.com/mv-sistemas/amestris/internal/app/domain"
 )
 
 func TestLocalTemplateReader(t *testing.T) {

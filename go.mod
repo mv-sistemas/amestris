@@ -1,4 +1,4 @@
-module github.com/mvsp/amestris
+module github.com/mv-sistemas/amestris
 
 go 1.16
 

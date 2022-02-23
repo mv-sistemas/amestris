@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/mvsp/amestris/internal/app/adapter/controller"
+	"github.com/mv-sistemas/amestris/internal/app/adapter/controller"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 )

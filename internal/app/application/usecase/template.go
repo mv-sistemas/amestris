@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"github.com/mvsp/amestris/internal/app/application/service"
-	"github.com/mvsp/amestris/internal/app/domain"
+	"github.com/mv-sistemas/amestris/internal/app/application/service"
+	"github.com/mv-sistemas/amestris/internal/app/domain"
 )
 
 type TemplateUseCases struct {
